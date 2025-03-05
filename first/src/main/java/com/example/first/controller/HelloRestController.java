@@ -20,6 +20,13 @@ public class HelloRestController {
     public String sayHello(@RequestParam(value = "name") String name) {
         return "Hello " + name + "1";
     }
+    // curl localhost:8080/hello/param/Naxayan -w "\n"
+    @GetMapping("/param/{name}")
+    public String sayHelloParam(@PathVariable String name) {
+        return "Hello " + name + "!";
+    }
+
+
 
 
 
